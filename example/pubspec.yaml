@@ -7,7 +7,7 @@ dependencies:
   flutter:
     sdk: flutter
   disposable_provider:
-    path: ../
+    path: ..
   cupertino_icons: ^0.1.2
   rxdart: any
 dev_dependencies:
