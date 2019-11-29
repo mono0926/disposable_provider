@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) => DisposableProvider(
-          builder: (context) => Model(),
+          create: (context) => Model(),
           child: _Tile(
             key: ValueKey(index),
             index: index,

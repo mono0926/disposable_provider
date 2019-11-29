@@ -8,11 +8,11 @@ import 'disposable.dart';
 class DisposableProvider<T extends Disposable> extends Provider<T> {
   DisposableProvider({
     Key key,
-    @required ValueBuilder<T> builder,
+    @required ValueBuilder<T> create,
     Widget child,
   }) : super(
           key: key,
-          builder: builder,
+          create: create,
           dispose: (_context, disposable) => disposable.dispose(),
           child: child,
         );
