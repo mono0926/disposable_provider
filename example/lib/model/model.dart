@@ -4,7 +4,7 @@ import 'package:rxdart/rxdart.dart';
 class Model implements Disposable {
   final _countController = BehaviorSubject<int>.seeded(0);
 
-  ValueObservable<int> get count => _countController;
+  ValueStream<int> get count => _countController;
 
   void increment() => _countController.value++;
 
