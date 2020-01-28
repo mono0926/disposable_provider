@@ -1,3 +1,7 @@
+## 2.1.1
+
+- Add lazy parameter
+
 ## 2.1.0
 
 - Update provider to 4.0.0

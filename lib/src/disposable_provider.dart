@@ -10,11 +10,13 @@ class DisposableProvider<T extends Disposable> extends Provider<T> {
     Key key,
     @required Create<T> create,
     Widget child,
+    bool lazy,
   }) : super(
           key: key,
           create: create,
           dispose: (_context, disposable) => disposable.dispose(),
           child: child,
+          lazy: lazy,
         );
 
   DisposableProvider.value({

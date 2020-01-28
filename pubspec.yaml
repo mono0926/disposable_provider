@@ -1,6 +1,6 @@
 name: disposable_provider
 description: DisposableProvider is thin wrapper of Provider and it calls dispose automatically.
-version: 2.1.0
+version: 2.1.1
 homepage: https://github.com/mono0926/disposable_provider
 environment:
   sdk: ">=2.1.0 <3.0.0"
