@@ -20,7 +20,7 @@ class DetailPage extends StatelessWidget {
           builder: (context, snapshot) {
             return Text(
               'count: ${snapshot.data}',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.headline4,
             );
           },
         ),

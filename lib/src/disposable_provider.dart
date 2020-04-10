@@ -10,12 +10,14 @@ class DisposableProvider<T extends Disposable> extends Provider<T> {
     Key key,
     @required Create<T> create,
     Widget child,
+    TransitionBuilder builder,
     bool lazy,
   }) : super(
           key: key,
           create: create,
           dispose: (_context, disposable) => disposable.dispose(),
           child: child,
+          builder: builder,
           lazy: lazy,
         );
 
@@ -23,10 +25,12 @@ class DisposableProvider<T extends Disposable> extends Provider<T> {
     Key key,
     @required T value,
     Widget child,
+    TransitionBuilder builder,
   }) : super.value(
           key: key,
           value: value,
           child: child,
+          builder: builder,
         );
 
   /// Thin wrapper of Provider.of
