@@ -55,7 +55,7 @@ class _Tile extends StatelessWidget {
           const SizedBox(width: 16),
           IconButton(
             color: Theme.of(context).primaryColor,
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
             onPressed: model.increment,
           ),
         ],
