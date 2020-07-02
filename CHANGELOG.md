@@ -1,3 +1,7 @@
+## 2.3.0
+
+- Add AutoDisposeDisposableProvider and AutoDisposeDisposableProviderFamily
+
 ## 2.2.0
 
 - Add builder parameter
