@@ -7,11 +7,11 @@ import 'disposable.dart';
 /// Thin wrapper of [Provider]
 class DisposableProvider<T extends Disposable> extends Provider<T> {
   DisposableProvider({
-    Key key,
-    @required Create<T> create,
-    Widget child,
-    TransitionBuilder builder,
-    bool lazy,
+    Key? key,
+    required Create<T> create,
+    Widget? child,
+    TransitionBuilder? builder,
+    bool? lazy,
   }) : super(
           key: key,
           create: create,
@@ -22,10 +22,10 @@ class DisposableProvider<T extends Disposable> extends Provider<T> {
         );
 
   DisposableProvider.value({
-    Key key,
-    @required T value,
-    Widget child,
-    TransitionBuilder builder,
+    Key? key,
+    required T value,
+    Widget? child,
+    TransitionBuilder? builder,
   }) : super.value(
           key: key,
           value: value,

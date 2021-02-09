@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'detail_page.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +28,8 @@ class HomePage extends StatelessWidget {
 
 class _Tile extends StatelessWidget {
   const _Tile({
-    Key key,
-    @required this.index,
+    Key? key,
+    required this.index,
   }) : super(key: key);
 
   final int index;
@@ -44,7 +44,7 @@ class _Tile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           StreamBuilder<int>(
-              initialData: count.value,
+              initialData: count.valueWrapper!.value,
               stream: count,
               builder: (context, snapshot) {
                 return Text(

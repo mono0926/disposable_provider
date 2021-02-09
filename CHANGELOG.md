@@ -1,3 +1,7 @@
+## 2.3.0
+
+- Migrate to null safety
+
 ## 2.2.0
 
 - Add builder parameter

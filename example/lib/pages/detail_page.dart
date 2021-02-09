@@ -3,7 +3,7 @@ import 'package:example/model/model.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({Key key}) : super(key: key);
+  const DetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class DetailPage extends StatelessWidget {
       ),
       body: Center(
         child: StreamBuilder<int>(
-          initialData: count.value,
+          initialData: count.valueWrapper!.value,
           stream: count,
           builder: (context, snapshot) {
             return Text(

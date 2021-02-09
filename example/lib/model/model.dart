@@ -6,7 +6,7 @@ class Model implements Disposable {
 
   ValueStream<int> get count => _countController;
 
-  void increment() => _countController.value++;
+  void increment() => _countController.add(_countController.requireValue + 1);
 
   @override
   void dispose() async {
