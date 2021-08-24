@@ -1,3 +1,7 @@
+## 2.4.0
+
+- Upgrade Provider version
+
 ## 2.3.0
 
 - Migrate to null safety
