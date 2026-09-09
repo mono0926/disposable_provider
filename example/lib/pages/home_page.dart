@@ -49,7 +49,7 @@ class _Tile extends StatelessWidget {
               builder: (context, snapshot) {
                 return Text(
                   '${snapshot.data}',
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 );
               }),
           const SizedBox(width: 16),
