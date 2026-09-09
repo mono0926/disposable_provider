@@ -1,3 +1,8 @@
+## 2.4.1
+
+- Add AI Agent Skill (`disposable_provider-lifecycle`)
+- Remove redundant import and update example
+
 ## 2.4.0
 
 - Upgrade Provider version
