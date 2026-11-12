@@ -5,32 +5,22 @@ import 'disposable.dart';
 
 /// Thin wrapper of [Provider]
 class DisposableProvider<T extends Disposable> extends Provider<T> {
-  DisposableProvider({
-    Key? key,
-    required Create<T> create,
-    Widget? child,
-    TransitionBuilder? builder,
-    bool? lazy,
+  new({
+    super.key,
+    required super.create,
+    super.child,
+    super.builder,
+    super.lazy,
   }) : super(
-          key: key,
-          create: create,
-          dispose: (_context, disposable) => disposable.dispose(),
-          child: child,
-          builder: builder,
-          lazy: lazy,
-        );
+         dispose: (context, disposable) => disposable.dispose(),
+       );
 
-  DisposableProvider.value({
-    Key? key,
-    required T value,
-    Widget? child,
-    TransitionBuilder? builder,
-  }) : super.value(
-          key: key,
-          value: value,
-          child: child,
-          builder: builder,
-        );
+  new value({
+    super.key,
+    required super.value,
+    super.child,
+    super.builder,
+  }) : super.value();
 
   /// Thin wrapper of Provider.of
   static T of<T extends Disposable>(BuildContext context) {

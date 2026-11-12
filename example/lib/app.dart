@@ -1,13 +1,10 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'pages/home_page.dart';
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+class const App({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-    );
+    return const MaterialApp(home: HomePage());
   }
 }

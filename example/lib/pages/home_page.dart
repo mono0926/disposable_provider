@@ -1,39 +1,27 @@
 import 'package:disposable_provider/disposable_provider.dart';
 import 'package:example/model/model.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'detail_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class const HomePage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Disposable Provider Example'),
-      ),
+      appBar: AppBar(title: const Text('Disposable Provider Example')),
       body: ListView.builder(
         itemCount: 100,
         itemBuilder: (context, index) => DisposableProvider(
           create: (context) => Model(),
-          child: _Tile(
-            key: ValueKey(index),
-            index: index,
-          ),
+          child: _Tile(key: ValueKey(index), index: index),
         ),
       ),
     );
   }
 }
 
-class _Tile extends StatelessWidget {
-  const _Tile({
-    Key? key,
-    required this.index,
-  }) : super(key: key);
-
-  final int index;
-
+class const _Tile({super.key, required final int index})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final model = DisposableProvider.of<Model>(context);
@@ -44,14 +32,15 @@ class _Tile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           StreamBuilder<int>(
-              initialData: count.valueWrapper!.value,
-              stream: count,
-              builder: (context, snapshot) {
-                return Text(
-                  '${snapshot.data}',
-                  style: Theme.of(context).textTheme.titleMedium,
-                );
-              }),
+            initialData: count.value,
+            stream: count,
+            builder: (context, snapshot) {
+              return Text(
+                '${snapshot.data}',
+                style: Theme.of(context).textTheme.titleMedium,
+              );
+            },
+          ),
           const SizedBox(width: 16),
           IconButton(
             color: Theme.of(context).primaryColor,
